@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 let Pokemon = new Schema ({
-    "id": String,
+    "dexNumber": String,
     "name": String,
     "type1": String,
     "type2": String,
@@ -14,7 +14,9 @@ let Pokemon = new Schema ({
     "specialDefense": String,
     "speed": String,
     "generation": String,
-    "legendary": String
+    "legendary": String,
+    "img": String,
+    "shiny": String
 })
 
 export default mongoose.model("pokemon", Pokemon)
