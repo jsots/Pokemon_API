@@ -5,7 +5,7 @@ const router = Router()
 
 router.get("/", controllers.getPokemon);
 router.get("/legendary", controllers.getLegendaryPokemon);
-router.get("/:id", controllers.getOnePokemon);
+router.get("/:dexnum", controllers.getOnePokemon);
 router.get("/type/:type", controllers.getPokemonByType);
 router.get("/gen/:gen", controllers.getPokemonByGen);
 // router.get("/speed/:spd", controllers.getPokemonBySpd);

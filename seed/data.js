@@ -4,7 +4,7 @@ import pokemon from "./Pokemon_Stats.json" assert {type: "json"};
 
 const pokemans = pokemon.map((item) => {
     const pokeman = {}
-    pokeman.dexNum = item.dexNumber
+    pokeman.dexNumber = item.dexNumber
     pokeman.name = item.name
     pokeman.type1 = item.type1
     pokeman.type2 = item.type2
@@ -17,8 +17,10 @@ const pokemans = pokemon.map((item) => {
     pokeman.speed = item.speed
     pokeman.generation = item.generation
     pokeman.legendary = item.legendary
-    pokeman.img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${item.dexNumber}.png`
+    pokeman.sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${item.dexNumber}.png`
     pokeman.shiny = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${item.dexNumber}.png`
+    // pokeman.og_art = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item.dexNumber}.png`
+    // pokeman.og_art_shiny = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${item.dexNumber}.png`
     return pokeman
 })
 

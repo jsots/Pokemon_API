@@ -15,8 +15,10 @@ let Pokemon = new Schema ({
     "speed": String,
     "generation": String,
     "legendary": String,
-    "img": String,
-    "shiny": String
+    "sprite": String,
+    "shiny": String,
+    // "og_art": String,
+    // "og_art_shiny": String
 })
 
 export default mongoose.model("pokemon", Pokemon)

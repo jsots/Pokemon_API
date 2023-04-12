@@ -52,8 +52,7 @@ export const getPokemonByGen = async (req, res) => {
 
 export const getOnePokemon = async (req, res) => {
     try {
-        const id = {'dexNumber' : req.params.id}
-        const pokemon = await Pokemon.find(id);
+        const pokemon = await Pokemon.find({"dexNumber": `${req.params.dexnum}`});
         res.json(pokemon);
     } catch (error) {
         console.log(error.message);
