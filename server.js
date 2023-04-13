@@ -9,7 +9,7 @@ const app = express()
 const PORT = process.env.PORT || 4614 // It will be 3000 unless we deploy, then it will be the first option
 
 app.use(express.json());
-app.use(cors());
+app.use(cors()); // Allows requests from other orgins. 
 app.use(logger("dev"));
 app.use ("/", routes)
 
