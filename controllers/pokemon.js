@@ -78,6 +78,6 @@ export const deletePokemon = async (req, res) => {
         throw new Error("Pokemon not found"); // this happens if there isnt a pokemon with the id that was typed in
     } catch (error) {
         console.log(error.message);
-        res.status(500).json({error: error.mesage}); // Not needed, but it will hang otherwise. Status 201 says the specific error known as created. 
+        res.status(500).json({error: error.mesage}); // Not needed, but it will hang otherwise. Status 500 says the specific error known as created. 
     }
 }
