@@ -51,6 +51,121 @@ Below, you can see a screenshot of an example of the data.
 
 ---
 
+
+
+## How to Use
+
+This link will navigate you to the deployed [Pokemon API](https://pokemonapi-production-04ea.up.railway.app/pokemon).
+
+When you open up the root route, select "highlight anyway" in order to see it in "prettier" format. 
+
+![Screenshot of warning window](./Images/json.png?raw=true "Screenshot of warning window")
+
+
+**NOTE:** The current API's files will only be (reasonably) viewable with a JSON viewer extension installed on your browser to display/"prettier" the large dataset in your browser. I use the [JSON Viewer Extension on Google Chrome.](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=en-US)
+
+---
+
+---
+
+## Routes
+
+This RESTful API includes CRUD functionality with the routes defined below:
+
+Root Route:
+```
+https://pokemonapi-production-04ea.up.railway.app/
+```
+
+- All pokemon:
+```
+https://pokemonapi-production-04ea.up.railway.app/pokemon
+```
+- All legendary pokemon
+
+```
+https://pokemonapi-production-04ea.up.railway.app/pokemon/legendary
+```
+- Find pokemon by:
+    - Dex Number (replace the ":dexnum" with the Pokedex number).
+
+```
+https://pokemonapi-production-04ea.up.railway.app/pokemon/:dexnum
+```
+- Find pokemon by:
+    - Type (replace the ":type" with the type of interest and make sure to capitalize the first letter)
+
+```
+https://pokemonapi-production-04ea.up.railway.app/pokemon/type/:type
+```
+- Find Pokemon by:
+    - Generation (replace the ":gen" with the generation number)
+
+```
+https://pokemonapi-production-04ea.up.railway.app/pokemon/gen/:gen
+```
+
+
+In order to perform any CRUD functionality, you must have an API platform. I use, and would recommend, [Postman](https://www.postman.com/).
+
+### *Create* - Pokemon
+
+In order to create a Pokemon, set the HTTP variable to POST. Then, select the "body" in the sub-menu. Select "raw" and change "TEXT" to JSON. Once this has been done, enter the information you wish to update in proper JSON format. See the image below for reference. 
+
+![Screenshot of Creating a Pokemon](./Images/post.png?raw=true "Screenshot of Creating a Pokemon")
+
+### *Read* - Find All Legendary Pokemon
+
+Finding all legendary pokemon is as simple as copying and pasting the below link.
+
+```bash
+https://pokemonapi-production-04ea.up.railway.app/pokemon/legendary
+```
+
+### *Read* - Find by Dex Number
+
+Finding a specific Pokemon will require knowing the pokemon's Pokedex number. The link below will navigate you to the first pokemon, Bulbasaur. The "1" in the url can be changed to any Pokedex number (up to 721) and the page will display the Pokemon of interest and its stats. 
+
+```
+https://pokemonapi-production-04ea.up.railway.app/pokemon/1
+```
+
+### *Read* - Find by Type
+
+Finding all pokemon of a specific type will require adding the route "/type/***type of interest***"
+
+When searching by type, it will show all Pokemon with that type (whether it is their primary or secondary type). **NOTE:** Make sure to capitalize the first letter of the type. 
+
+```
+https://pokemonapi-production-04ea.up.railway.app/pokemon/type/Poison
+```
+
+### *Read* - Find by Generation
+
+If you would like to find Pokemon based on the generation they are from, you can simply navigate to the route "/gen/***generation of interest***".
+
+Below, is an example of finding all the 3rd gen pokemon. 
+
+```
+https://pokemonapi-production-04ea.up.railway.app/pokemon/gen/3
+```
+
+### *Update* - Pokemon
+
+In order to update a Pokemon, set the HTTP variable to PUT. Then, select the "body" in the sub-menu. Select "raw" and change "TEXT" to JSON. Once this has been done, enter the information you wish to update in proper JSON format. See the image below for reference. 
+
+![Screenshot of Updating a Pokemon](./Images/put.png?raw=true "Screenshot of Updating a Pokemon")
+
+### *Delete* - Pokemon
+
+If you would like delete a Pokemon, set the HTTP variable to be delete and then type in the Pokemon's ObjectId. If done successfully, you will see a message that reads "Pokemon Deleted!" See the image below.
+
+![Screenshot of Deleting a Pokemon](./Images/delete.png?raw=true "Screenshot of Deleting a Pokemon")
+
+---
+
+---
+
 ## Installation
 If you would like to use/take components of this API for your own project, follow the steps below:
 
@@ -79,102 +194,6 @@ http://localhost:4614/pokemon
 When you open up the root route, select "highlight anyway" in order to see it in "prettier" format. You will get a "warning" message, see below. 
 
 ![Screenshot of warning window](./Images/json.png?raw=true "Screenshot of warning window")
-
-
-## How to Use
-
-This link will navigate you to the [Pokemon API](https://pokemonapi-production-04ea.up.railway.app/pokemon).
-
-When you open up the root route, select "highlight anyway" in order to see it in "prettier" format. 
-
-![Screenshot of warning window](./Images/json.png?raw=true "Screenshot of warning window")
-
-
-**NOTE:** The current API's files will only be (reasonably) viewable with a JSON viewer extension installed on your browser to display/"pretty" the large datasets in your browser. I use the [JSON Viewer Extension on Google Chrome.](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=en-US)
-
----
-
----
-
-## Routes
-
-This RESTful API includes CRUD functionality with the routes defined below. Defined below:
-
-- Create
-    - Post - /pokemon
-- Read
-    - All pokemon - /pokemon
-    - All legendary pokemon - /pokemon/legendary
-    - Find pokemon by:
-        - Dex Number - /pokemon/:dexnum
-        - Type - /pokemon/type/:type
-        - Generation - /pokemon/gen/:gen
-- Update
-    - Put - /pokemon/:id
-- Delete
-    - Delete - /pokemon/:id
-
-In order to perform any CRUD functionality, you must have an API platform. I use, and would recommend, [Postman](https://www.postman.com/).
-
-### **Create** - Pokemon
-
-In order to update a Pokemon, set the HTTP variable to POST. Then, select the "body" in the sub-menu. Select "raw" and change "TEXT" to JSON. Once this has been done, enter the information you wish to update in proper JSON format. See the image below for reference. 
-
-![Screenshot of Creating a Pokemon](./Images/post.png?raw=true "Screenshot of Creating a Pokemon")
-
-***Insert picture here***
-
-### **Read** - Find All Legendary Pokemon
-
-Finding all legendary pokemon is as simple as copying and pasting the below link.
-
-```bash
-https://pokemonapi-production-04ea.up.railway.app/pokemon/legendary
-```
-
-### **Read** - Find by Dex Number
-
-Finding a specific Pokemon will require knowing the pokemon's Pokedex number. The link below will navigate you to the first pokemon, Bulbasaur. The "1" in the url can be changed to any Pokedex number (up to 721) and the page will display the Pokemon of interest and its stats. 
-
-```
-https://pokemonapi-production-04ea.up.railway.app/pokemon/1
-```
-
-### **Read** - Find by Type
-
-Finding all pokemon of a specific type will require adding the route "/type/***type of interest***"
-
-When searching by type, it will show all Pokemon with that type (whether it is their primary or secondary type). 
-
-```
-https://pokemonapi-production-04ea.up.railway.app/pokemon/type/Poison
-```
-
-### **Read** - Find by Generation
-
-If you would like to find Pokemon based on the generation they are from, you can simply navigate to the route "/gen/***generation of interest***".
-
-Below, is an example of finding all the 3rd gen pokemon. 
-
-```
-https://pokemonapi-production-04ea.up.railway.app/pokemon/gen/3
-```
-
-### **Update** - Pokemon
-
-In order to update a Pokemon, set the HTTP variable to PUT. Then, select the "body" in the sub-menu. Select "raw" and change "TEXT" to JSON. Once this has been done, enter the information you wish to update in proper JSON format. See the image below for reference. 
-
-![Screenshot of Updating a Pokemon](./Images/put.png?raw=true "Screenshot of Updating a Pokemon")
-
-### **Delete** - Pokemon
-
-If you would like delete a Pokemon, set the HTTP variable to be delete and then type in the Pokemon's ObjectId. If done successfully, you will see a message that reads "Pokemon Deleted!" See the image below.
-
-![Screenshot of Deleting a Pokemon](./Images/delete.png?raw=true "Screenshot of Deleting a Pokemon")
-
----
-
----
 
 ## Contact Info
 
