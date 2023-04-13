@@ -3,6 +3,7 @@ import Pokemon from "../models/Pokemon.js";
 export const getPokemon = async (req, res) => {
     try {
         const pokemon = await Pokemon.find();
+        pokemon.sort((a,b) => a.dexNumber - b.dexNumber)
         res.json(pokemon);
     } catch (error) {
         console.log(error.message);
@@ -39,16 +40,6 @@ export const getPokemonByGen = async (req, res) => {
         res.status(500).json({error: error.mesage}); // Not needed, but it will hang otherwise. Status 500 says the specific error which is internal server error. 
     }
 };
-
-// export const getPokemonBySpd = async (req, res) => {
-//     try {
-//         const pokemon = await Pokemon.find({"speed": {$gte: req.params.spd}});
-//         res.json(pokemon);
-//     } catch (error) {
-//         console.log(error.message);
-//         res.status(500).json({error: error.mesage}); // Not needed, but it will hang otherwise. Status 500 says the specific error which is internal server error. 
-//     }
-// };
 
 export const getOnePokemon = async (req, res) => {
     try {

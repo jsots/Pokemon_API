@@ -18,9 +18,9 @@ const pokemans = pokemon.map((item) => {
     pokeman.generation = item.generation
     pokeman.legendary = item.legendary
     pokeman.sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${item.dexNumber}.png`
-    pokeman.shiny = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${item.dexNumber}.png`
-    // pokeman.og_art = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item.dexNumber}.png`
-    // pokeman.og_art_shiny = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${item.dexNumber}.png`
+    pokeman.shiny_sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${item.dexNumber}.png`
+    pokeman.og_art = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item.dexNumber}.png`
+    pokeman.og_art_shiny = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${item.dexNumber}.png`
     return pokeman
 })
 
