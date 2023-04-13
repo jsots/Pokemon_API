@@ -6,6 +6,10 @@
 
 ## What this API Includes:
 
+Below, you can see a screenshot of an example of the data.
+
+![Screenshot of Data](./Images/dataEg.png?raw=true "Screenshot of Data")
+
 This API will capture the following information for the first 721 Pokemon (according to the National Dex):
 
 - dexNumber: String
@@ -43,9 +47,6 @@ This API will capture the following information for the first 721 Pokemon (accor
 - og_art_shiny: String
     - The shiny original artwork of the Pokemon, written as a string in the JSON file.
 
-Below, you can see a screenshot of an example of the data.
-
-![Screenshot of Data](./Images/dataEg.png?raw=true "Screenshot of Data")
 
 ---
 
